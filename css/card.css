@@ -1,0 +1,71 @@
+/** Contenido Principal**/
+
+main>section {
+    margin-bottom: 2rem;
+}
+
+.contenedor-cards {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.info .categoria {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.info .titulo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.info .precio {
+    color: var(--obscuro);
+    font-size: .9rem;
+}
+
+.card .contenedor-imagen {
+    position: relative;
+}
+
+.card:hover .card-agregarCarrito {
+    opacity: 1;
+}
+
+.card-agregarCarrito {
+    position: absolute;
+    top: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@supports not(backdrop-filter: blur(5px)) {
+    .card-agregarCarrito {
+        background-color: rgb(168, 108, 108, .4);
+    }
+}
+
+.card-agregarCarrito .agregarCarrito {
+    background-color: var(--primario);
+    color: var(--claro);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 2rem;
+    inline-size: 100%;
+    font-size: 1.2rem;
+}

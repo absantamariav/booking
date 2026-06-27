@@ -1,4 +1,6 @@
 @import './icons.css';
+@import './carrito.css';
+@import './card.css';
 
 :root {
     --fuente-principal: 'Lato', sans-serif;
@@ -171,40 +173,6 @@ img {
 
 .contenido-hero form input[type="submit"]:hover {
     cursor: pointer;
-}
-
-/** Contenido Principal**/
-
-main>section {
-    margin-bottom: 2rem;
-}
-
-.contenedor-cards {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.card img {
-    width: 100%;
-}
-
-
-.info .categoria {
-    text-transform: uppercase;
-    font-size: .9rem;
-    font-weight: 700;
-}
-
-.info .titulo {
-    font-size: 1.6rem;
-    font-weight: 900;
-    margin: 0;
-}
-
-.info .precio {
-    color: var(--obscuro);
-    font-size: .9rem;
 }
 
 /** Premium **/
