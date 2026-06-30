@@ -1,3 +1,13 @@
+.canasta {
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    padding: .5rem 2rem;
+    text-decoration: none;
+    color: var(--obscuro);
+    font-size: 3rem;
+}
+
 .carrito {
     position: fixed;
     bottom: 10rem;
@@ -7,4 +17,9 @@
     background-color: var(--claro);
     min-inline-size: 25rem;
     min-block-size: 10rem;
+    display: none;
+}
+
+.carrito.activo {
+    display: block;
 }
