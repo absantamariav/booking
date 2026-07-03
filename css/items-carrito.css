@@ -1,0 +1,37 @@
+@import './carrito-controles.css';
+
+.carrito .lista-itemsCarrito {
+    background: var(--claro);
+    padding: .5rem;
+    gap: 1rem;
+}
+
+.itemsCarrito {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.carrito p {
+    margin: 0;
+}
+
+.carrito .categoria {
+    font-size: .7rem;
+}
+
+.carrito .titulo {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-block: .5rem;
+}
+
+.carrito .precio {
+    font-size: .8rem;
+}
+
+.carrito img {
+    width: 35%;
+    object-fit: contain;
+    object-position: center;
+}

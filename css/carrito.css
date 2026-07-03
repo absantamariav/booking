@@ -1,23 +1,17 @@
-.canasta {
-    position: fixed;
-    bottom: 4rem;
-    right: 1rem;
-    padding: .5rem 2rem;
-    text-decoration: none;
-    color: var(--obscuro);
-    font-size: 3rem;
-}
+@import './items-carrito.css';
+@import './canasta.css';
 
 .carrito {
     position: fixed;
     bottom: 10rem;
     right: 1rem;
     padding: 1rem;
-    border: 1px solid red;
     background-color: var(--claro);
-    min-inline-size: 25rem;
-    min-block-size: 10rem;
-    display: none;
+    inline-size: 23.5rem;
+    max-block-size: 30rem;
+    /* display: none; */
+    z-index: 1;
+    background: rgb(228, 228, 228);
 }
 
 .carrito.activo {

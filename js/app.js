@@ -2,18 +2,22 @@ const btnFlotante = document.querySelector('.btn-flotante');
 const footer = document.querySelector('.footer');
 const canasta = document.querySelector('.canasta');
 const carrito = document.querySelector('.carrito');
+const listaServicios = document.querySelector('.contenido');
+let itemsCarrito = [];
 
 cargarEventListeners();
 function cargarEventListeners() {
     btnFlotante.addEventListener('click', mostrarOcultarFooter);
     canasta.addEventListener('click', mostrarCarrito);
+    listaServicios.addEventListener('click', agregarServicio);
 }
 
+/** mostrar y ocultar footer y carrito **/
 function mostrarOcultarFooter() {
     if (footer.classList.contains('activo')) {
         footer.classList.remove('activo');
         this.classList.remove('activo');
-        this.textContent = 'Idioma y Moneda';
+        this.textContent = 'Sobre Nosotros';
     } else {
         footer.classList.add('activo');
         this.classList.add('activo');
@@ -22,7 +26,6 @@ function mostrarOcultarFooter() {
 }
 
 function mostrarCarrito(e) {
-    e.preventDefault();
     const carritoActivo = carrito.classList.toggle('activo');
     if (carritoActivo) {
         document.addEventListener('click', ocultarCarritoDesdeAfuera);
@@ -52,5 +55,28 @@ function limpiarEventListeners() {
     document.removeEventListener('keydown', ocultarCarritoConEscape);
 }
 
-const listaServicios = document.querySelector('.card');
-let itemsCarrito = [];
+/** agregar y eliminar items al carrito **/
+function agregarServicio(e) {
+    //evitamos afectar los enlaces reales
+    if (e.target.getAttribute('href') === '#') {
+        e.preventDefault();
+    }
+    if (e.target.classList.contains('agregarCarrito')) {
+        const servicioSeleccionado = e.target.parentElement.parentElement.parentElement;
+        leerDatosServicio(servicioSeleccionado);
+    }
+}
+
+function leerDatosServicio(servicio) {
+    const precioNumero = servicio.querySelector('.precio').textContent.replace(' por persona', '').replace(' por noche', '').replace(',', '').slice(1)
+    const infoServicio = {
+        imagen: servicio.querySelector('img').src,
+        categoria: servicio.querySelector('.categoria').textContent,
+        titulo: servicio.querySelector('.titulo').textContent,
+        precio: Number(precioNumero),
+        cantidad: 1,
+        id: servicio.querySelector('.agregarCarrito').getAttribute('data-id')
+    }
+    itemsCarrito = [...itemsCarrito, infoServicio]
+    console.log(itemsCarrito);
+}

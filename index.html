@@ -38,6 +38,36 @@
         </div>
     </div> <!--.hero-->
 
+    <nav class="carrito-contenedor">
+        <div class="carrito">
+            <div class="lista-itemsCarrito">
+                <div class="itemsCarrito">
+                    <img src="./img/hacer3.jpg" alt="pureba1">
+                    <div class="descripcion-itemsCarrito">
+                        <p class="categoria">Casa completa - 2 camas</p>
+                        <p class="titulo">Casa completa con todos los servicios y 2 recamaras</p>
+                        <p class="precio">$1,200 por persona</p>
+                        <div class="controles">
+                            <button class="cantidad disminuir">-</button>
+                            <span class="numero">16</span>
+                            <button class="cantidad aumentar">+</button>
+                        </div>
+                        <button class="eliminarItem">X</button>
+                    </div>
+                </div>
+            </div>
+            <h4 class="subtotal-html">SUBTOTAL: $ 0</h4>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+            <button id="pagar">Pagar</button>
+        </div>
+        <div class="canasta-contenedor">
+            <button class="canasta" aria-label="ver carrito de compras">
+                <i class="icon-cart" aria-hidden="true"></i>
+                <span class="contador">16</span>
+            </button>
+        </div>
+    </nav>
+
     <main class="contenido contenedor">
         <section class="hacer">
             <h2>Que Hacer</h2>
@@ -46,7 +76,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/hacer1.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Agregar al carrito</a>
+                            <a href="#" class="agregarCarrito" data-id="1">Agregar al carrito</a>
                         </div>
                     </div>
                     <div class="info">
@@ -59,7 +89,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/hacer2.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Agregar al carrito</a>
+                            <a href="#" class="agregarCarrito" data-id="2">Agregar al carrito</a>
                         </div>
                     </div>
                     <div class="info">
@@ -72,7 +102,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/hacer3.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Agregar al carrito</a>
+                            <a href="#" class="agregarCarrito" data-id="3">Agregar al carrito</a>
                         </div>
                     </div>
                     <div class="info">
@@ -85,7 +115,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/hacer4.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Agregar al carrito</a>
+                            <a href="#" class="agregarCarrito" data-id="4">Agregar al carrito</a>
                         </div>
                     </div>
                     <div class="info">
@@ -115,7 +145,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/hospedaje1.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Reservar</a>
+                            <a href="#" class="agregarCarrito" data-id="5">Reservar</a>
                         </div>
                     </div>
                     <div class="info">
@@ -128,7 +158,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/hospedaje2.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Reservar</a>
+                            <a href="#" class="agregarCarrito" data-id="6">Reservar</a>
                         </div>
                     </div>
                     <div class="info">
@@ -141,7 +171,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/hospedaje3.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Reservar</a>
+                            <a href="#" class="agregarCarrito" data-id="7">Reservar</a>
                         </div>
                     </div>
                     <div class="info">
@@ -190,7 +220,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/newyork1.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Agregar al carrito</a>
+                            <a href="#" class="agregarCarrito" data-id="8">Agregar al carrito</a>
                         </div>
                     </div>
                     <div class="info">
@@ -203,7 +233,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/newyork2.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Agregar al carrito</a>
+                            <a href="#" class="agregarCarrito" data-id="9">Agregar al carrito</a>
                         </div>
                     </div>
                     <div class="info">
@@ -216,7 +246,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/newyork3.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Agregar al carrito</a>
+                            <a href="#" class="agregarCarrito" data-id="10">Agregar al carrito</a>
                         </div>
                     </div>
                     <div class="info">
@@ -229,7 +259,7 @@
                     <div class="contenedor-imagen">
                         <img src="img/newyork4.jpg">
                         <div class="contenedor-agregarCarrito">
-                            <a href="#" class="agregarCarrito">Agregar al carrito</a>
+                            <a href="#" class="agregarCarrito" data-id="11">Agregar al carrito</a>
                         </div>
                     </div>
                     <div class="info">
@@ -294,26 +324,7 @@
             </div>
         </div>
     </footer>
-    <div class="carrito">
-        <table id="lista-carrito">
-            <thead>
-                <th>Categoria</th>
-                <th>Titulo</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <h4 class="subtotal-html">SUBTOTAL: $ 0</h4>
-        <a href="#" id="vaciar-carrito">Vaciar Carrito</a>
-    </div>
-    <a class="canasta" href="#" title="carrito de compras">
-        <i class="icon-cart" aria-hidden="true"></i>
-    </a>
-    <a href="#footer" class="btn-flotante">Idioma y Moneda</a>
+    <a href="#footer" class="btn-flotante">Sobre Nosotros</a>
 </body>
 
 </html>
