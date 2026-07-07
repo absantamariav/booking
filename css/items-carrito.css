@@ -1,15 +1,19 @@
 @import './carrito-controles.css';
 
 .carrito .lista-itemsCarrito {
-    background: var(--claro);
-    padding: .5rem;
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    max-block-size: 25rem;
+    overflow-y: auto;
 }
 
 .itemsCarrito {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: .7rem;
+    background: var(--claro);
+    padding: .7rem;
 }
 
 .carrito p {

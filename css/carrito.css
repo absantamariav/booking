@@ -5,13 +5,12 @@
     position: fixed;
     bottom: 10rem;
     right: 1rem;
-    padding: 1rem;
-    background-color: var(--claro);
+    padding: .7rem;
     inline-size: 23.5rem;
     max-block-size: 30rem;
-    /* display: none; */
+    display: none;
     z-index: 1;
-    background: rgb(228, 228, 228);
+    background: var(--amarillo);
 }
 
 .carrito.activo {
