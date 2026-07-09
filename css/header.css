@@ -1,7 +1,7 @@
 /** Header */
 .hero {
     height: 100vh;
-    background-image: url(../img/arriba.jpg);
+    background-image: url(../assets/img/arriba.jpg);
     display: grid;
     grid-template-rows: 1fr 2fr;
     background-position: 0 0;
