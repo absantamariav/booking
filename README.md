@@ -21,12 +21,12 @@ A web-based booking application that allows users to browse services, add them t
 
 ### Landing Page
 
-![Landing Page](./screenshots/landing-page.png)
+![Landing Page](./assets/screenshots/landing-page.png)
 
 ### Main Content
 
-![Main Content](./screenshots/main-content.png)
+![Main Content](./assets/screenshots/main-content.png)
 
 ### Cart Drawer
 
-![Cart Drawer](./screenshots/cart-drawer.png)
+![Cart Drawer](./assets/screenshots/cart-drawer.png)
