@@ -53,8 +53,6 @@ function ocultarCarritoDesdeAfuera(e) {
         carrito.classList.remove('activo');
         limpiarEventListeners();
     }
-    console.log('mandame tu ga');
-
 }
 
 function ocultarCarritoConEscape(e) {
@@ -82,19 +80,18 @@ function agregarServicio(e) {
 }
 
 function leerDatosServicio(servicio) {
-    const precioNumero = servicio.querySelector('.precio').textContent.replace(' por persona', '').replace(' por noche', '').replace(',', '').slice(1);
     const infoServicio = {
         imagen: servicio.querySelector('img').src,
         categoria: servicio.querySelector('.categoria').textContent,
         titulo: servicio.querySelector('.titulo').textContent,
-        precio: Number(precioNumero),
+        precio: Number(servicio.querySelector('.precio').dataset.precio),
         cantidad: 1,
         id: servicio.querySelector('.agregarCarrito').getAttribute('data-id')
     }
 
     const existeItem = itemsCarrito.some(item => item.id === infoServicio.id);
     if (existeItem) {
-        const arreglo = itemsCarrito.map(item => {
+        itemsCarrito.forEach(item => {
             if (item.id === infoServicio.id) {
                 item.cantidad++;
                 return item;
@@ -144,7 +141,7 @@ function limpiarCarritoHTML() {
 function actualizarItem(e) {
     if (e.target.classList.contains('disminuir')) {
         const itemId = e.target.getAttribute('data-id');
-        const arreglo = itemsCarrito.map(item => {
+        itemsCarrito.forEach(item => {
             if (item.id === itemId && item.cantidad > 1) {
                 item.cantidad--;
                 return;
@@ -154,7 +151,7 @@ function actualizarItem(e) {
         });
     } else if (e.target.classList.contains('aumentar')) {
         const itemId = e.target.getAttribute('data-id');
-        const arreglo = itemsCarrito.map(item => {
+        itemsCarrito.forEach(item => {
             if (item.id === itemId) {
                 item.cantidad++;
                 return;
@@ -164,7 +161,7 @@ function actualizarItem(e) {
         });
     } else if (e.target.classList.contains('eliminarItem')) {
         const itemId = e.target.getAttribute('data-id');
-        const arreglo = itemsCarrito.map(item => {
+        itemsCarrito.forEach(item => {
             if (item.id === itemId) {
                 itemsCarrito = itemsCarrito.filter(item => item.id !== itemId)
             }

@@ -1,0 +1,83 @@
+/** Header */
+.hero {
+    height: 100vh;
+    background-image: url(../img/arriba.jpg);
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background-position: 0 0;
+    background-size: 150% 150%;
+    transition: background-position .3s ease;
+}
+
+.header {
+    align-self: start;
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacion a {
+    color: var(--claro);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.navegacion a:last-of-type {
+    margin-right: 2rem;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-inline: 1rem;
+}
+
+.contenido-hero {
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: max-content auto;
+}
+
+.contenido-hero h1 {
+    grid-column: 2 / 3;
+    color: white;
+    grid-row: 1 / 2;
+}
+
+.contenido-hero form {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    position: relative;
+    display: flex;
+    height: 4rem;
+}
+
+.contenido-hero form input[type="text"] {
+    flex: 1;
+    border-radius: 10px;
+    border: none;
+    background-image: url(../img/lupa.png);
+    background-repeat: no-repeat;
+    background-position: calc(1% + 1rem) calc(1% + .8rem);
+    padding-left: 5rem;
+    font-size: 1.6rem;
+}
+
+.contenido-hero form input[type="submit"] {
+    position: absolute;
+    right: 1rem;
+    top: .6rem;
+    background-color: var(--primario);
+    border: none;
+    padding: .7rem 2rem;
+    font-size: 1.2rem;
+    color: var(--claro);
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.contenido-hero form input[type="submit"]:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,57 @@
+.premium {
+    background-image: url(../img/hospedaje-pro.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    height: 28rem;
+    grid-template-columns: unset;
+}
+
+@media (min-width:768px) {
+    .premium {
+        grid-template-columns: auto 30%;
+    }
+}
+
+.premium .info {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.premium .info h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .premium .info {
+        grid-column: 2 / 3;
+    }
+
+    .premium .info h2 {
+        text-align: right;
+    }
+}
+
+.boton {
+    background-color: var(--claro);
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--obscuro);
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 400;
+    -webkit-box-shadow: 0px 14px 43px -21px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 14px 43px -21px rgba(0, 0, 0, 1);
+    box-shadow: 0px 14px 43px -21px rgba(0, 0, 0, 1);
+    transition: all .3s ease-in-out;
+}
+
+.boton:hover {
+    background-color: var(--primario);
+    color: var(--claro);
+}

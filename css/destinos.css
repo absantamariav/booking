@@ -1,0 +1,18 @@
+.destinos .contenedor-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.destinos .card {
+    position: relative;
+}
+
+.destinos .info {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: var(--claro);
+}
+
+.destinos .info .titulo {
+    font-size: 1.8rem;
+}
