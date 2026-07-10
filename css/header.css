@@ -1,6 +1,6 @@
 /** Header */
 .hero {
-    height: 100vh;
+    block-size: 100vh;
     background-image: url(../assets/img/arriba.jpg);
     display: grid;
     grid-template-rows: 1fr 2fr;
@@ -58,7 +58,8 @@
     flex: 1;
     border-radius: 10px;
     border: none;
-    background-image: url(../img/lupa.png);
+    background-image: url(../assets/img/lupa.png);
+    background-size: 2.2rem;
     background-repeat: no-repeat;
     background-position: calc(1% + 1rem) calc(1% + .8rem);
     padding-left: 5rem;

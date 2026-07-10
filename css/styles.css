@@ -35,6 +35,12 @@ h1 {
     }
 }
 
+@media (max-width:480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
 
 h2 {
     font-size: 2rem;
