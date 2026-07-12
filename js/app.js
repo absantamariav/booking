@@ -194,3 +194,22 @@ function contadorCanasta() {
         contadorHTML.classList.remove('activo')
     }
 }
+
+/** actualizar placeholder segun dispositivo **/
+function actualizarPlaceholder() {
+    const input = document.querySelector(".busqueda");
+
+    // Condición: Si la pantalla mide menos de 768px (Móviles/Tablets)
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        input.placeholder = "Lima, Múnich, etc.";
+    } else {
+        // Texto para pantallas grandes (Escritorio)
+        input.placeholder = "Lima, Guayaquil, Londres, Nueva York";
+    }
+}
+
+// Ejecutar al cargar la página
+actualizarPlaceholder();
+
+// Ejecutar cada vez que el usuario cambie el tamaño de la pantalla
+window.addEventListener("resize", actualizarPlaceholder);

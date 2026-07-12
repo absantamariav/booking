@@ -7,7 +7,7 @@ main>section {
 .contenedor-cards {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
 }
 
 .card img {
@@ -50,6 +50,13 @@ main>section {
     align-items: flex-end;
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+@media (max-width:480px) {
+    .contenedor-agregarCarrito {
+        opacity: 1;
+        backdrop-filter: none;
+    }
 }
 
 @supports not(backdrop-filter: blur(5px)) {
